@@ -13,9 +13,9 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header-flag header header header header logo-ftn"
-    "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
-    "aside-menu aside-menu aside-menu aside-menu aside-content aside-content"
+    "header header header header header header"
+    "nav nav nav nav nav nav"
+    "main main main main main main"
     "footer footer footer footer footer footer";
   grid-template-columns: auto auto auto auto auto auto;
   grid-gap: 5px;
@@ -25,24 +25,28 @@ body {
   max-width: 1200px;
 }
 /******************* header *******************/
+header { grid-area: header; }
 .header-flag {
-  grid-area: header-flag;
+  /* grid-area: header-flag; */
   margin: auto;
+  float: left;
 }
-.header {
-  grid-area: header;
+.header-headings {
+  /* grid-area: header; */
   text-align: center;
   margin: auto;
+  float: left;
 }
 .logo-ftn {
-  grid-area: logo-ftn;
+  /* grid-area: logo-ftn; */
   text-align: center;
   margin: auto;
   padding: 5px 5px 0px 0px;
+  float: right;
 }
-/****************** nav-bar *******************/
-.nav-bar { grid-area: nav-bar; }
-.nav-bar {
+/******************** nav ********************/
+nav { grid-area: nav; }
+nav {
   background-color: rgb(1, 11, 99);
   color: white;
 }
@@ -82,10 +86,6 @@ li.dropdown { display: inline-block; }
 }  
 .dropdown-content a:hover { background-color: #ddf2ff; }
 .dropdown:hover .dropdown-content { display: block; }
-/******************* main *********************/
-.aside-menu { grid-area: aside-menu; }
-.aside-content { grid-area: right-side-content; }
-.footer { grid-area: footer; }
 .search {
   float: right;
   padding: 14px 16px;
@@ -95,17 +95,31 @@ li.dropdown { display: inline-block; }
   margin: 0;
   padding: 10px;
 }
-.footer {
+/******************* main *********************/
+main { grid-area: main; }
+/* .aside-menu { grid-area: aside-menu; }
+.aside-content { grid-area: right-side-content; } */
+.main-section {
+  float: left;
+  width: 70%;
+}
+.aside-section {
+  float: right;
+  width: 30%;
+}
+article {
+  margin: 10px;
+  padding: 15px;
+}
+/******************* footer ********************/
+footer { grid-area: footer; }
+footer {
   width: 100%;
   text-align: center;
   margin: 0;
   padding: 20px 0px 20px 0px;
   background-color: rgb(0, 5, 46);
   color: white;
-}
-.article {
-  margin: 10px;
-  padding: 15px;
 }
 /*************** media queries *****************/
 @media screen and (max-width: 700px) {
