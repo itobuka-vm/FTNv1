@@ -10,94 +10,90 @@
   <body>
     <div class="grid-container">
       <header>
-          <div class="logo-ftn">
-              <img src="./images/sample-logo-ftn-01.jpg" alt="Logo fakulteta" />
-            </div>
-        <div class="header-headings">
-          <h3>Република Србија - Универзитет у Крагујевцу</h3>
-          <h1>Технички факултет у Чачку</h1>
+        <div class="header-info">
+          <strong
+            >Република Србија - Универзитет у Крагујевцу | Технички факултет у
+            Чачку</strong
+          ><span class="page-language"
+            ><a href="#">RS</a> | <a href="#">EN</a></span
+          >
         </div>
-        <div class="header-flag">
-            <img
-              src="./images/Čačak_-_grb.png"
-              alt="zastava RS"
-              width="250px"
-              height="195px"
-            />
+        <nav>
+          <div class="logo-ftn">
+            <img src="./images/sample-logo-ftn-01.jpg" alt="Logo fakulteta" />
           </div>
+          <ul>
+            <li><a href="#">Насловна</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Факултет</a>
+              <div class="dropdown-content">
+                <a href="#">О факултету</a>
+                <a href="#">40 година ФТН</a>
+                <a href="#">Руководство</a>
+                <a href="#">Катедре</a>
+                <a href="#">Служба</a>
+                <a href="#">Именик</a>
+                <a href="#">Акта факултета</a>
+                <a href="#">Информатор о раду</a>
+                <a href="#">Избор сарадника</a>
+                <a href="#">Локација</a>
+                <a href="#">Контакт</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Студије</a>
+              <div class="dropdown-content">
+                <a href="#">Упис</a>
+                <a href="#">Основне студије</a>
+                <a href="#">Интегрисане студије</a>
+                <a href="#">Мастер студије</a>
+                <a href="#">Докторске студије</a>
+                <a href="#">Докторске дисертације</a>
+                <a href="#">Студентска пракса</a>
+                <a href="#">Правила судија</a>
+                <a href="#">Академски календар</a>
+                <a href="#">Испитни рокови</a>
+                <a href="#">Ценовник услуга</a>
+                <a href="#">Распоред наставе</a>
+                <a href="#">Наставничке компетенције</a>
+                <a href="#">Стипендије и конкурси</a>
+                <a href="#">Електронско учење</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Наука</a>
+              <div class="dropdown-content">
+                <a href="#">Научне делатности</a>
+                <a href="#">Лабораторије</a>
+                <a href="#">Издавачка делатност</a>
+                <a href="#">Научни скупови</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Акредитација</a>
+              <div class="dropdown-content">
+                <a href="#">Акредитација 2014</a>
+                <a href="#">Акредитација 2009</a>
+                <a href="#">Самовредновања</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Актуелности</a>
+              <div class="dropdown-content">
+                <a href="#">Обавештења</a>
+                <a href="#">Сервиси</a>
+                <a href="#">Документа и обарсци</a>
+              </div>
+            </li>
+            <li><a href="#">Контакт</a></li>
+            <div class="search">
+              <input type="text" id="search-field" />
+              <button onclick="search()" id="btnSearch">Претрага</button>
+            </div>
+          </ul>
+        </nav>
+        <div class="header-bg"></div>
       </header>
-
-      <nav>
-        <ul>
-          <li><a href="#">Насловна</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Факултет</a>
-            <div class="dropdown-content">
-              <a href="#">О факултету</a>
-              <a href="#">40 година ФТН</a>
-              <a href="#">Руководство</a>
-              <a href="#">Катедре</a>
-              <a href="#">Служба</a>
-              <a href="#">Именик</a>
-              <a href="#">Акта факултета</a>
-              <a href="#">Информатор о раду</a>
-              <a href="#">Избор сарадника</a>
-              <a href="#">Локација</a>
-              <a href="#">Контакт</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Студије</a>
-            <div class="dropdown-content">
-              <a href="#">Упис</a>
-              <a href="#">Основне студије</a>
-              <a href="#">Интегрисане студије</a>
-              <a href="#">Мастер студије</a>
-              <a href="#">Докторске студије</a>
-              <a href="#">Докторске дисертације</a>
-              <a href="#">Студентска пракса</a>
-              <a href="#">Правила судија</a>
-              <a href="#">Академски календар</a>
-              <a href="#">Испитни рокови</a>
-              <a href="#">Ценовник услуга</a>
-              <a href="#">Распоред наставе</a>
-              <a href="#">Наставничке компетенције</a>
-              <a href="#">Стипендије и конкурси</a>
-              <a href="#">Електронско учење</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Наука</a>
-            <div class="dropdown-content">
-              <a href="#">Научне делатности</a>
-              <a href="#">Лабораторије</a>
-              <a href="#">Издавачка делатност</a>
-              <a href="#">Научни скупови</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Акредитација</a>
-            <div class="dropdown-content">
-              <a href="#">Акредитација 2014</a>
-              <a href="#">Акредитација 2009</a>
-              <a href="#">Самовредновања</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Актуелности</a>
-            <div class="dropdown-content">
-              <a href="#">Обавештења</a>
-              <a href="#">Сервиси</a>
-              <a href="#">Документа и обарсци</a>
-            </div>
-          </li>
-          <li><a href="#">Контакт</a></li>
-          <div id="pretraga">
-            <input type="text" id="searchField" />
-            <button onclick="search()" id="btnSearch">Претрага</button>
-          </div>
-        </ul>
-      </nav>
 
       <main>
         <section class="main-section">

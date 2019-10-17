@@ -2,8 +2,8 @@
 :root {
   --default-bg-color: #f7f7f7;
   --body-bg-color: #55acee;
-  --nav-font-color: #fff;
-  --nav-bg-color: #f65314;
+  --nav-font-color: rgb(255, 255, 255);
+  --nav-bg-color: #618215;
   --nav-hover-color: #7cbb00;
   --dropdown-hover-color: #a6d831;
   --footer-bg-color: #292F33;
@@ -24,7 +24,6 @@ body {
   display: grid;
   grid-template-areas:
     "header header header header header header"
-    "nav nav nav nav nav nav"
     "main main main main main main"
     "footer footer footer footer footer footer";
   grid-template-columns: auto auto auto auto auto auto;
@@ -36,46 +35,40 @@ body {
 header {
   grid-area: header;
   background-color: var(--default-bg-color);
+}
+.header-bg {
   background-image: url(../images/sample-img-07.jpg);
-  height: 600px;
+  height: 37rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
+.header-info {
+  background-color: var(--footer-bg-color);
+  color: var(--default-bg-color);
+  padding: 0.5rem 1rem;
+}
+.page-language { float: right; }
 .logo-ftn {
-  /* grid-area: logo-ftn; */
   text-align: center;
   margin: auto;
-  padding: 5px 5px 0 0;
   float: left;
 }
 .logo-ftn img {
-  width: 12rem;
-  height: 12rem;
-}
-.header-headings {
-  /* grid-area: header; */
-  text-align: center;
-  margin: auto;
-  float: left;
-}
-.header-flag {
-  /* grid-area: header-flag; */
-  margin: auto;
-  float: right;
+  border-radius: 50%;
+  height: 3.8rem;
+  padding: 0 0.5rem;
 }
 /******************** nav ********************/
 nav {
-  grid-area: nav;
   background-color: var(--nav-bg-color);
   color: white;
+  height: auto;
 }
 /* dropdown */
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 li { float: left; }
@@ -84,7 +77,7 @@ li a,
   display: inline-block;
   color: var(--nav-font-color);
   text-align: center;
-  padding: 14px 16px;
+  padding: 1.25rem;
   text-decoration: none;
 }
 li a:hover,
@@ -109,12 +102,12 @@ li.dropdown { display: inline-block; }
 .dropdown:hover .dropdown-content { display: block; }
 .search {
   float: right;
-  padding: 14px 16px;
+  padding: 1.1rem;
 }
-.ftn {
-  font-size: 50px;
-  margin: 0;
-  padding: 0.5rem;
+#search-field,
+#btnSearch {
+  padding: 0.2rem;
+  border-radius: 0.2rem;
 }
 /******************* main *********************/
 main {
