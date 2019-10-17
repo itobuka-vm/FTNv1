@@ -1,24 +1,22 @@
 /******************** root ********************/
 :root {
-  --body-bg-color: #b8d7ff;
-  --header-bg-color: #fff;
-  --main-bg-color: #ff0000;
-  --nav-bg-color: #010b63;
-  --nav-hover-color: #1652a0;
-  --dropdown-bg-color: #b8d7ff;
-  --dropdown-hover-color: #ddf2ff;
-  --footer-bg-color: #00052e;
-  --general-font: "Segoe UI", Tahoma, Verdana, sans-serif;
-  --bg-gradient-color: linear-gradient(to bottom, #fff 8%, #ff0000 150%);
+  --default-bg-color: #f7f7f7;
+  --body-bg-color: #55acee;
+  --nav-font-color: #fff;
+  --nav-bg-color: #f65314;
+  --nav-hover-color: #7cbb00;
+  --dropdown-hover-color: #a6d831;
+  --footer-bg-color: #292F33;
+  --default-font: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
-/******************* general ******************/
+/******************* default ******************/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: var(--general-font);
+  font-family: var(--default-font);
   margin: auto;
   background-color: var(--body-bg-color);
 }
@@ -30,18 +28,31 @@ body {
     "main main main main main main"
     "footer footer footer footer footer footer";
   grid-template-columns: auto auto auto auto auto auto;
-  grid-gap: 5px;
-  background: var(--bg-gradient-color);
   padding: 0;
   margin: auto;
-  max-width: 75rem;
+  width: 100%;
 }
 /******************* header *******************/
-header { grid-area: header; }
-.header-flag {
-  /* grid-area: header-flag; */
+header {
+  grid-area: header;
+  background-color: var(--default-bg-color);
+  background-image: url(../images/sample-img-07.jpg);
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.logo-ftn {
+  /* grid-area: logo-ftn; */
+  text-align: center;
   margin: auto;
+  padding: 5px 5px 0 0;
   float: left;
+}
+.logo-ftn img {
+  width: 12rem;
+  height: 12rem;
 }
 .header-headings {
   /* grid-area: header; */
@@ -49,20 +60,18 @@ header { grid-area: header; }
   margin: auto;
   float: left;
 }
-.logo-ftn {
-  /* grid-area: logo-ftn; */
-  text-align: center;
+.header-flag {
+  /* grid-area: header-flag; */
   margin: auto;
-  padding: 5px 5px 0px 0px;
   float: right;
 }
 /******************** nav ********************/
-nav { grid-area: nav; }
 nav {
+  grid-area: nav;
   background-color: var(--nav-bg-color);
   color: white;
 }
-/* dropdown menu - w3schools */
+/* dropdown */
 ul {
   list-style-type: none;
   margin: 0;
@@ -73,7 +82,7 @@ li { float: left; }
 li a,
 .dropbtn {
   display: inline-block;
-  color: var(--header-bg-color);
+  color: var(--nav-font-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -84,13 +93,13 @@ li.dropdown { display: inline-block; }
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--dropdown-bg-color);
+  background-color: var(--nav-hover-color);
   min-width: 10rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 .dropdown-content a {
-  color: black;
+  color: var(--nav-font-color);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -105,10 +114,13 @@ li.dropdown { display: inline-block; }
 .ftn {
   font-size: 50px;
   margin: 0;
-  padding: 10px;
+  padding: 0.5rem;
 }
 /******************* main *********************/
-main { grid-area: main; }
+main {
+  grid-area: main;
+  background-color: var(--default-bg-color);
+}
 /* .aside-menu { grid-area: aside-menu; }
 .aside-content { grid-area: right-side-content; } */
 .main-section {
@@ -120,8 +132,10 @@ main { grid-area: main; }
   width: 30%;
 }
 article {
-  margin: 10px;
-  padding: 15px;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: var(--nav-font-color);
+  border-radius: 1rem;
 }
 /******************* footer ********************/
 footer { grid-area: footer; }
@@ -129,9 +143,9 @@ footer {
   width: 100%;
   text-align: center;
   margin: 0;
-  padding: 20px 0px 20px 0px;
+  padding: 0.5rem 0;
   background-color: var(--footer-bg-color);
-  color: var(--header-bg-color);
+  color: var(--nav-font-color);
 }
 /*************** media queries *****************/
 @media screen and (max-width: 43.75em) {
