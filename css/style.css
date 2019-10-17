@@ -1,4 +1,16 @@
 /******************** root ********************/
+:root {
+  --body-bg-color: #b8d7ff;
+  --header-bg-color: #fff;
+  --main-bg-color: #ff0000;
+  --nav-bg-color: #010b63;
+  --nav-hover-color: #1652a0;
+  --dropdown-bg-color: #b8d7ff;
+  --dropdown-hover-color: #ddf2ff;
+  --footer-bg-color: #00052e;
+  --general-font: "Segoe UI", Tahoma, Verdana, sans-serif;
+  --bg-gradient-color: linear-gradient(to bottom, #fff 8%, #ff0000 150%);
+}
 /******************* general ******************/
 * {
   box-sizing: border-box;
@@ -6,9 +18,9 @@
   padding: 0;
 }
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--general-font);
   margin: auto;
-  background-color: #b8d7ff;
+  background-color: var(--body-bg-color);
 }
 .grid-container {
   display: grid;
@@ -19,10 +31,10 @@ body {
     "footer footer footer footer footer footer";
   grid-template-columns: auto auto auto auto auto auto;
   grid-gap: 5px;
-  background: linear-gradient(to bottom, #fff 8%, #ff0000 150%);
+  background: var(--bg-gradient-color);
   padding: 0;
   margin: auto;
-  max-width: 1200px;
+  max-width: 75rem;
 }
 /******************* header *******************/
 header { grid-area: header; }
@@ -47,7 +59,7 @@ header { grid-area: header; }
 /******************** nav ********************/
 nav { grid-area: nav; }
 nav {
-  background-color: rgb(1, 11, 99);
+  background-color: var(--nav-bg-color);
   color: white;
 }
 /* dropdown menu - w3schools */
@@ -61,19 +73,19 @@ li { float: left; }
 li a,
 .dropbtn {
   display: inline-block;
-  color: white;
+  color: var(--header-bg-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 li a:hover,
-.dropdown:hover .dropbtn { background-color: #1652a0; }
+.dropdown:hover .dropbtn { background-color: var(--nav-hover-color); }
 li.dropdown { display: inline-block; }
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #b8d7ff;
-  min-width: 160px;
+  background-color: var(--dropdown-bg-color);
+  min-width: 10rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -84,7 +96,7 @@ li.dropdown { display: inline-block; }
   display: block;
   text-align: left;
 }  
-.dropdown-content a:hover { background-color: #ddf2ff; }
+.dropdown-content a:hover { background-color: var(--dropdown-hover-color); }
 .dropdown:hover .dropdown-content { display: block; }
 .search {
   float: right;
@@ -118,13 +130,13 @@ footer {
   text-align: center;
   margin: 0;
   padding: 20px 0px 20px 0px;
-  background-color: rgb(0, 5, 46);
-  color: white;
+  background-color: var(--footer-bg-color);
+  color: var(--header-bg-color);
 }
 /*************** media queries *****************/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 43.75em) {
   .header-flag,
-  .header,
+  .header-flag,
   .logo-ftn,
   .nav-bar,
   .aside-menu,
