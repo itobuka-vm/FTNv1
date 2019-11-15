@@ -1,8 +1,8 @@
-// domaci - izrada web sajta fakulteta 
+# domaci - izrada web sajta fakulteta 
 
-// profesor Nenad Stefanovic
+**profesor Nenad Stefanovic**
 
-U okviru domaceg zadatka potrebno je osmisliti dizajn (wireframe) jedne stranice i 
+> U okviru domaceg zadatka potrebno je osmisliti dizajn (wireframe) jedne stranice i 
 izraditi HTML/CSS stranicu na osnovu dizajna. Stranica treba ukratko da predstavi 
 FTN (opsti podaci, logo, studijski programi, kontakt, itd.). Obavezno kreirati CSS 
 meni. Mozete dodati i druge sadrzaje (fidove sa FTN naloga na drustvenim mrezama, 
