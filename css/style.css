@@ -1,24 +1,13 @@
-/******************** root ********************/
-:root {
-  --default-bg-color: #f7f7f7;
-  --body-bg-color: #55acee;
-  --nav-font-color: #fff;
-  --nav-bg-color: #e07340;
-  --nav-hover-color: #dd2150;
-  --dropdown-hover-color: #dc5173;
-  --footer-bg-color: #292F33;
-  --default-font: "Segoe UI", Tahoma, Verdana, sans-serif;
-}
-/******************* default ******************/
+/* Global Styles*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: var(--default-font);
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   margin: auto;
-  background-color: var(--body-bg-color);
+  background-color: #55acee;
 }
 .grid-container {
   display: grid;
@@ -31,10 +20,10 @@ body {
   margin: auto;
   width: 100%;
 }
-/******************* header *******************/
+/* Header*/
 header {
   grid-area: header;
-  background-color: var(--default-bg-color);
+  background-color: #f7f7f7;
 }
 .header-bg {
   background-image: url(../images/sample-img-07.jpg);
@@ -45,16 +34,20 @@ header {
   position: relative;
 }
 .header-info {
-  background-color: var(--footer-bg-color);
-  color: var(--default-bg-color);
+  background-color: #292f33;
+  color: #f7f7f7;
   padding: 0.5rem 1rem;
 }
 .header-info a {
-  color: var(--default-bg-color);
+  color: #f7f7f7;
   text-decoration: none;
 }
-.header-info a:hover { color: var(--nav-bg-color); }
-.page-language { float: right; }
+.header-info a:hover {
+  color: #dd2150;
+}
+.page-language {
+  float: right;
+}
 .logo-ftn {
   float: left;
   padding-left: 2.5rem;
@@ -63,14 +56,14 @@ header {
   border-radius: 50%;
   height: 5.4rem;
 }
-/******************** nav ********************/
+/* Navbar */
 nav {
-  background-color: var(--nav-bg-color);
+  background-color: #dd2150;
   background: linear-gradient(to right, #8400ff, #ff8c00, #40e0d0);
-  color: var(--nav-font-color);
+  color: #fff;
   height: 5.4rem;
 }
-/* dropdown */
+/* Dropdown */
 ul {
   list-style-type: none;
   overflow: hidden;
@@ -78,35 +71,45 @@ ul {
   font-weight: bold;
   float: right;
 }
-li { float: left; }
+li {
+  float: left;
+}
 li a,
 .dropbtn {
   display: inline-block;
-  color: var(--nav-font-color);
+  color: #fff;
   text-align: center;
   padding: 2rem;
   text-decoration: none;
 }
 li a:hover,
-.dropdown:hover .dropbtn { background-color: var(--nav-hover-color); }
-li.dropdown { display: inline-block; }
+.dropdown:hover .dropbtn {
+  background-color: #dd2150;
+}
+li.dropdown {
+  display: inline-block;
+}
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--nav-hover-color);
+  background-color: #dd2150;
   min-width: 10rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 .dropdown-content a {
-  color: var(--nav-font-color);
+  color: #fff;
   padding: 2rem 16px;
   text-decoration: none;
   display: block;
   text-align: left;
-}  
-.dropdown-content a:hover { background-color: var(--dropdown-hover-color); }
-.dropdown:hover .dropdown-content { display: block; }
+}
+.dropdown-content a:hover {
+  background-color: #dc5173;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .search {
   float: right;
   padding: 1.9rem;
@@ -116,10 +119,10 @@ li.dropdown { display: inline-block; }
   padding: 0.2rem;
   border-radius: 0.2rem;
 }
-/******************* main *********************/
+/* Main */
 main {
   grid-area: main;
-  background-color: var(--default-bg-color);
+  background-color: #f7f7f7;
 }
 /* .aside-menu { grid-area: aside-menu; }
 .aside-content { grid-area: right-side-content; } */
@@ -134,20 +137,22 @@ main {
 article {
   margin: 1rem;
   padding: 1rem;
-  background-color: var(--nav-font-color);
+  background-color: #fff;
   border-radius: 1rem;
 }
-/******************* footer ********************/
-footer { grid-area: footer; }
+/* Footer */
+footer {
+  grid-area: footer;
+}
 footer {
   width: 100%;
   text-align: center;
   margin: 0;
   padding: 0.5rem 0;
-  background-color: var(--footer-bg-color);
-  color: var(--nav-font-color);
+  background-color: #292f33;
+  color: #fff;
 }
-/*************** media queries *****************/
+/* Media Queries */
 @media screen and (max-width: 43.75em) {
   .header-flag,
   .header-flag,
@@ -155,5 +160,7 @@ footer {
   .nav-bar,
   .aside-menu,
   .aside-content,
-  .footer { flex-direction: column; }
+  .footer {
+    flex-direction: column;
+  }
 }
