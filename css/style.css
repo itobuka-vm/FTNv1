@@ -61,15 +61,16 @@ header {
 nav {
   background: linear-gradient(to right, #8400ff, #ff8c00, #40e0d0);
   color: #fff;
-  height: 3rem;
+  /* height: 3rem; */
 }
 /* Dropdown */
 ul {
   list-style-type: none;
   overflow: hidden;
-  text-transform: uppercase;
   font-weight: bold;
-  float: right;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 li {
   float: left;
@@ -81,6 +82,7 @@ li a,
   text-align: center;
   padding: 12px 24px;
   text-decoration: none;
+  transition: ease-in-out 0.7s;
 }
 li a:hover,
 .dropdown:hover .dropbtn {
@@ -93,7 +95,8 @@ li.dropdown {
   display: none;
   position: absolute;
   background-color: #dd2150;
-  width: 100%;
+  width: 0;
+  height: 0;
   left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -105,16 +108,17 @@ li.dropdown {
   display: block;
   text-align: left;
 }
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
   background-color: #dc5173;
-}
+} */
 .dropdown:hover .dropdown-content {
   display: block;
+  width: 60%;
 }
-.search {
+/* .search {
   float: right;
   padding: 1.9rem;
-}
+} */
 #search-field,
 #btnSearch {
   padding: 0.2rem;
@@ -125,25 +129,22 @@ li.dropdown {
   float: left;
   width: 33.33%;
   padding: 10px;
-  background-color: #dd2150;
+  background-color: rgba(0, 0, 255, 0.5);
   height: 250px;
 }
-
 /* Style links inside the columns */
 .column a {
   float: none;
-  color: black;
+  color: #fff;
   padding: 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
-
 /* Add a background color on hover */
 .column a:hover {
-  background-color: #dc5173;
+  background-color: rgba(255, 115, 0, 0.6);
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
