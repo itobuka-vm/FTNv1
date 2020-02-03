@@ -64,7 +64,7 @@ nav {
   /* height: 3rem; */
 }
 /* Dropdown */
-ul {
+nav ul {
   list-style-type: none;
   overflow: hidden;
   font-weight: bold;
@@ -72,10 +72,10 @@ ul {
   margin-right: auto;
   width: 70%;
 }
-li {
+nav li {
   float: left;
 }
-li a,
+nav li a,
 .dropbtn {
   display: inline-block;
   color: #fff;
@@ -124,6 +124,7 @@ li.dropdown {
   padding: 0.2rem;
   border-radius: 0.2rem;
 }
+/* Mega Menu */
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
@@ -151,7 +152,6 @@ li.dropdown {
   display: table;
   clear: both;
 }
-/*************/
 /* Main */
 main {
   width: 85%;
@@ -174,8 +174,22 @@ article {
 /* Footer */
 footer {
   grid-area: footer;
+  width: 100%;
+  background-color: #373a3b;
+  color: #fff;
 }
-footer {
+.footer-info {
+  display: grid;
+  grid-template-areas: "footer-link footer-link footer-link footer-link";
+  grid-template-columns: auto auto auto auto;
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+}
+.footer-info li {
+  list-style-type: none;
+}
+.copyright {
   width: 100%;
   text-align: center;
   margin: 0;
