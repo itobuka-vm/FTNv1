@@ -61,16 +61,14 @@ header {
 nav {
   background: linear-gradient(to right, #8400ff, #ff8c00, #40e0d0);
   color: #fff;
-  /* height: 3rem; */
+  display: flex;
+  justify-content: center;
 }
 /* Dropdown */
 nav ul {
   list-style-type: none;
   overflow: hidden;
   font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
 }
 nav li {
   float: left;
@@ -83,6 +81,8 @@ nav li a,
   padding: 12px 24px;
   text-decoration: none;
   transition: ease-in-out 0.7s;
+  width: 150px;
+  height: 50px;
 }
 li a:hover,
 .dropdown:hover .dropbtn {
@@ -97,7 +97,7 @@ li.dropdown {
   background-color: #dd2150;
   width: 0;
   height: 0;
-  left: 0;
+  left: 12rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -108,12 +108,9 @@ li.dropdown {
   display: block;
   text-align: left;
 }
-/* .dropdown-content a:hover {
-  background-color: #dc5173;
-} */
 .dropdown:hover .dropdown-content {
   display: block;
-  width: 60%;
+  width: 100%;
 }
 /* .search {
   float: right;
@@ -126,12 +123,19 @@ li.dropdown {
 }
 /* Mega Menu */
 /* Create three equal columns that floats next to each other */
+/* .row {
+  display: flex;
+  width: 60rem;
+  column-count: 4;
+  column-gap: 0;
+  column-rule: 1px solid lightblue;
+} */
 .column {
   float: left;
-  width: 33.33%;
-  padding: 10px;
+  width: 25%;
+  padding: 2px;
   background-color: rgba(0, 0, 255, 0.5);
-  height: 250px;
+  /* height: 250px; */
 }
 /* Style links inside the columns */
 .column a {
@@ -141,7 +145,9 @@ li.dropdown {
   text-decoration: none;
   display: block;
   text-align: left;
+  width: 100%;
 }
+
 /* Add a background color on hover */
 .column a:hover {
   background-color: rgba(255, 115, 0, 0.6);
